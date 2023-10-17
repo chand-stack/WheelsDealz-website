@@ -4,13 +4,13 @@ import { BsPersonCircle } from 'react-icons/bs';
 import Headroom from 'react-headroom';
 const Nav = () => {
     const links = <>
-<li><NavLink to="/" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-red-600 underline " : ""}>
+<li><NavLink to="/" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-orange-500 underline " : ""}>
 Home
 </NavLink></li>
-<li><NavLink to="/addproduct" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-red-600 underline" : ""}>
+<li><NavLink to="/addproduct" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-orange-500 underline" : ""}>
 Add Product
 </NavLink></li>
-<li><NavLink to="/cart" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-red-600 underline" : ""}>
+<li><NavLink to="/cart" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-orange-500 underline" : ""}>
 My Cart
 </NavLink></li>
     </>
@@ -46,7 +46,7 @@ My Cart
     </ul>
   </div>
   <div className="navbar-end">
-    <Link><button className="btn btn-outline text-white flex items-center gap-2"><BsPersonCircle className='text-red-600 text-lg'/>Login</button></Link>
+    <Link><button className="btn btn-outline text-white border-orange-500 flex items-center gap-2"><BsPersonCircle className='text-orange-500 text-lg'/>Login</button></Link>
   </div>
 </div>
 </Headroom>

@@ -9,7 +9,7 @@ const Banner = () => {
 
    <div className='text-white h-full space-y-3 w-full bg-black bg-opacity-80 flex justify-center items-center'>
     <div className='text-center'>
-    <h1 className='text-3xl md:text-5xl lg:text-7xl font-bold'>Your Journey, Our Deals: <br /><span className='text-red-600'>WheelsDeal.</span></h1>
+    <h1 className='text-3xl md:text-5xl lg:text-7xl font-bold'>Your Journey, Our Deals: <br /><span className='text-orange-500'>WheelsDeal.</span></h1>
     <p className='md:text-xl font-semibold md:w-1/2 w-4/5 mx-auto'>Discover the best auto deals at WheelsDeal! Drive in style without breaking the bank. Your dream ride is just a click away. Let&lsquo;s hit the road of savings together!</p>
     </div>
    </div>
@@ -23,7 +23,7 @@ const Banner = () => {
 
   <div className='text-white h-full w-full space-y-3 bg-black bg-opacity-80 flex justify-center items-center'>
     <div className='text-center'>
-    <h1 className='text-3xl md:text-5xl lg:text-7xl font-bold'>Rev Up Your Ride with <br /><span className='text-red-600'>WheelsDeal.</span></h1>
+    <h1 className='text-3xl md:text-5xl lg:text-7xl font-bold'>Rev Up Your Ride with <br /><span className='text-orange-500'>WheelsDeal.</span></h1>
     <p className='md:text-xl font-semibold md:w-1/2 w-4/5 mx-auto'>Revamp your ride, revitalize your budget! Explore WheelsDeal for unbeatable automotive offers. Your ideal vehicle is waiting for you. Drive smart, choose WheelsDeal.</p>
     </div>
    </div>
@@ -39,7 +39,7 @@ const Banner = () => {
 
   <div className='text-white h-full w-full space-y-3 bg-black bg-opacity-80 flex justify-center items-center'>
   <div className='text-center'>
-    <h1 className='text-3xl md:text-5xl lg:text-7xl font-bold'>Unlock the Perfect Drive with <br /><span className='text-red-600'>WheelsDeal.</span></h1>
+    <h1 className='text-3xl md:text-5xl lg:text-7xl font-bold'>Unlock the Perfect Drive with <br /><span className='text-orange-500'>WheelsDeal.</span></h1>
     <p className='md:text-xl font-semibold md:w-1/2 w-4/5 mx-auto'>Upgrade your wheels, upgrade your lifestyle! WheelsDeal brings you top-notch automotive deals. Quality meets affordability. Let&lsquo;s drive towards a great deal today!</p>
     </div>
    </div>
