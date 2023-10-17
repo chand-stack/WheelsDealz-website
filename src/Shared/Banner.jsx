@@ -5,7 +5,7 @@ const Banner = () => {
     return (
         <div>
             <div className="carousel w-full">
-  <div id="slide1" className="carousel-item relative w-full h-96 md:h-screen" style={{backgroundImage:`url(${car})`, backgroundRepeat:"no-repeat", backgroundSize:"cover"}}>
+  <div id="slide1" className="carousel-item relative w-full h-96 md:h-screen" style={{backgroundImage:`url(${carone})`, backgroundRepeat:"no-repeat", backgroundSize:"cover"}}>
 
    <div className='text-white h-full space-y-3 w-full bg-black bg-opacity-80 flex justify-center items-center'>
     <div className='text-center'>
@@ -19,7 +19,7 @@ const Banner = () => {
       <a href="#slide2" className="btn btn-circle">❯</a>
     </div>
   </div> 
-  <div id="slide2" className="carousel-item relative w-full h-96 md:h-screen" style={{backgroundImage:`url(${carone})`, backgroundRepeat:"no-repeat", backgroundSize:"cover"}}>
+  <div id="slide2" className="carousel-item relative w-full h-96 md:h-screen" style={{backgroundImage:`url(${car})`, backgroundRepeat:"no-repeat", backgroundSize:"cover"}}>
 
   <div className='text-white h-full w-full space-y-3 bg-black bg-opacity-80 flex justify-center items-center'>
     <div className='text-center'>

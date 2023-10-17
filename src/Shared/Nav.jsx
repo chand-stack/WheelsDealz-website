@@ -15,15 +15,16 @@ My Cart
 </NavLink></li>
     </>
     return (
-        <Headroom style={{
-            webkitTransition: 'all .5s ease-in-out',
-            mozTransition: 'all .5s ease-in-out',
-            oTransition: 'all .5s ease-in-out',
+        
+        <div className='bg-black'>
+            <Headroom style={{
+            WebkitTransition: 'all .5s ease-in-out',
+            MozTransition: 'all .5s ease-in-out',
+            OTransition: 'all .5s ease-in-out',
             transition: 'all .5s ease-in-out'
           }}>
-        <div className='bg-black'>
            
-            <div className="navbar container mx-auto bg-black bg-opacity-70">
+            <div className="navbar  bg-black bg-opacity-40">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -48,9 +49,9 @@ My Cart
     <Link><button className="btn btn-outline text-white flex items-center gap-2"><BsPersonCircle className='text-red-600 text-lg'/>Login</button></Link>
   </div>
 </div>
-
+</Headroom>
         </div>
-        </Headroom>
+      
     );
 };
 
