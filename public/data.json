@@ -1,0 +1,9 @@
+[
+    {"id": 1, "name": "Toyota", "img": "url_to_toyota_image"},
+    {"id": 2, "name": "Ford", "img": "url_to_ford_image"},
+    {"id": 3, "name": "BMW", "img": "url_to_bmw_image"},
+    {"id": 4, "name": "Mercedes-Benz", "img": "url_to_mercedes_image"},
+    {"id": 5, "name": "Tesla", "img": "url_to_tesla_image"},
+    {"id": 6, "name": "Honda", "img": "url_to_honda_image"}
+  ]
+  

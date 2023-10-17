@@ -1,4 +1,5 @@
 import Banner from "../Shared/Banner";
+import Choose from "../Shared/Choose";
 import Newsletter from "../Shared/Newsletter";
 
 
@@ -8,6 +9,7 @@ const Home = () => {
         <div>
             
             <Banner/>
+            <Choose/>
             <Newsletter/>
            
         </div>
