@@ -1,9 +1,9 @@
 [
-    {"id": 1, "name": "Toyota", "img": "url_to_toyota_image"},
-    {"id": 2, "name": "Ford", "img": "url_to_ford_image"},
-    {"id": 3, "name": "BMW", "img": "url_to_bmw_image"},
-    {"id": 4, "name": "Mercedes-Benz", "img": "url_to_mercedes_image"},
-    {"id": 5, "name": "Tesla", "img": "url_to_tesla_image"},
-    {"id": 6, "name": "Honda", "img": "url_to_honda_image"}
+    {"id": 1, "name": "Toyota", "img": "https://i.ibb.co/593j2fm/toyota.png"},
+    {"id": 2, "name": "Ford", "img": "https://i.ibb.co/9nkdZC2/ford.png"},
+    {"id": 3, "name": "BMW", "img": "https://i.ibb.co/93cN8Xk/bmw.jpg"},
+    {"id": 4, "name": "Mercedes-Benz", "img": "https://i.ibb.co/1JJ3Rq7/benz.jpg"},
+    {"id": 5, "name": "Tesla", "img": "https://i.ibb.co/pJ8xh3H/tesla.jpg"},
+    {"id": 6, "name": "Honda", "img": "https://i.ibb.co/J2TNDRZ/honda.jpg"}
   ]
   
