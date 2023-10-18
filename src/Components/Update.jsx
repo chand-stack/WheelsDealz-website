@@ -1,8 +1,45 @@
 import { useLoaderData } from "react-router-dom";
 import bg from '../assets/carcover2.jpg'
+import Swal from "sweetalert2";
 const Update = () => {
     const loadedData = useLoaderData()
     console.log(loadedData);
+
+    const updateHandler = e => {
+        e.preventDefault()
+        const form = e.target 
+        const name = form.name.value 
+        const brandName = form.brand.value
+        const brandNameLower = brandName.toLowerCase()
+        const type = form.type.value 
+        const price = form.price.value 
+        const description = form.description.value 
+        const rating = form.rating.value 
+        const photo = form.photo.value 
+        console.log(name,brandNameLower,type,price,description,rating,photo);
+        const updatedCar = {
+            name,brandName,type,price,description,rating,photo
+        }
+        fetch(`http://localhost:5000/update/${loadedData._id}`,{
+            method:"PATCH",
+            headers:{
+                "content-type":"application/json"
+            },
+            body:JSON.stringify(updatedCar)
+        })
+        .then(res=>res.json())
+        .then(data => {
+            console.log(data)
+            if(data.modifiedCount>0){
+                Swal.fire(
+                    'Great!',
+                    'Product updated successfully!',
+                    'success'
+                  )
+            }
+        })
+    }
+
     return (
         <>
         <div className='h-[50vh]' style={{backgroundImage:`url(${bg})`,backgroundSize:"cover",backgroundRepeat:"no-repeat", backgroundPosition:"center"}}>
@@ -12,7 +49,7 @@ const Update = () => {
         </div>
 
 <div className='container mx-auto py-10 px-3 md:px-10 lg:px-16'>
-    <form className='space-y-4'>
+    <form onSubmit={updateHandler} className='space-y-4'>
 
 <div className='grid md:grid-cols-2 gap-4'>
 <div className='space-y-2'>

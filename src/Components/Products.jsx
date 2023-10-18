@@ -13,7 +13,6 @@ const Products = () => {
     const params = useParams()
     // console.log( (params.id).toLowerCase());
     const brandName = params.id.toLowerCase()
-    console.log(brandName);
 
     useEffect(()=>{
         fetch(`http://localhost:5000/${brandName}`)
@@ -28,7 +27,7 @@ const Products = () => {
         <div className="carousel w-full">
   <div id="slide1" className="carousel-item relative w-full h-96 md:h-screen" style={{backgroundImage:`url(${ban1})`, backgroundRepeat:"no-repeat", backgroundSize:"cover" , backgroundPosition:"center"}}>
 
-  <div className='text-white h-full space-y-3 w-full bg-black bg-opacity-80 flex justify-center items-center'>
+  <div className='text-white h-full space-y-3 w-full bg-black bg-opacity-50 flex justify-center items-center'>
     <div className='text-center'>  
     <h1 className='text-3xl md:text-5xl lg:text-7xl font-bold'>Get Pre-Approved for a<br /><span className='text-orange-500'>Car Loan</span> Today.</h1>
     <p className='md:text-xl font-semibold md:w-1/2 w-4/5 mx-auto'>Discover the best auto deals at WheelsDeal! Drive in style without breaking the bank. Your dream ride is just a click away. Let&lsquo;s hit the road of savings together!</p>
@@ -42,7 +41,7 @@ const Products = () => {
   </div> 
   <div id="slide2" className="carousel-item relative w-full h-96 md:h-screen" style={{backgroundImage:`url(${ban2})`, backgroundRepeat:"no-repeat", backgroundSize:"cover" , backgroundPosition:"center"}}>
 
-  <div className='text-white h-full space-y-3 w-full bg-black bg-opacity-80 flex justify-center items-center'>
+  <div className='text-white h-full space-y-3 w-full bg-black bg-opacity-50 flex justify-center items-center'>
     <div className='text-center'> 
     <h1 className='text-3xl md:text-5xl lg:text-7xl font-bold'>Drive Home in a New Car Today for Less Than<br /><span className='text-orange-500'>$200/Month.</span></h1>
     <p className='md:text-xl font-semibold md:w-1/2 w-4/5 mx-auto'>Discover the best auto deals at WheelsDeal! Drive in style without breaking the bank. Your dream ride is just a click away. Let&lsquo;s hit the road of savings together!</p>
@@ -56,9 +55,9 @@ const Products = () => {
   </div> 
   <div id="slide3" className="carousel-item relative w-full h-96 md:h-screen" style={{backgroundImage:`url(${ban3})`, backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundPosition:"center"}}>
 
-  <div className='text-white h-full space-y-3 w-full bg-black bg-opacity-80 flex justify-center items-center'>
-    <div className='text-center'>  in Federal Tax Credits
-    <h1 className='text-3xl md:text-5xl lg:text-7xl font-bold'>Get Up to<br /><span className='text-orange-500'>$7,500</span> in Federal Tax Credits</h1>
+  <div className='text-white h-full space-y-3 w-full bg-black bg-opacity-50 flex justify-center items-center'>
+    <div className='text-center'>
+    <h1 className='text-3xl md:text-5xl lg:text-7xl font-bold'>in Federal Tax Credits <br /> Get Up to<br /><span className='text-orange-500'>$7,500</span> in Federal Tax Credits</h1>
     <p className='md:text-xl font-semibold md:w-1/2 w-4/5 mx-auto'>Discover the best auto deals at WheelsDeal! Drive in style without breaking the bank. Your dream ride is just a click away. Let&lsquo;s hit the road of savings together!</p>
     </div>
    </div>
