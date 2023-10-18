@@ -3,6 +3,7 @@ import Root from "../MainLayout/Root";
 import Home from "../Components/Home";
 import Products from "../Components/Products";
 import AddProduct from "../Components/AddProduct";
+import Update from "../Components/Update";
 
 
 const routes = createBrowserRouter([
@@ -21,6 +22,11 @@ const routes = createBrowserRouter([
             {
                 path:"/addproduct",
                 element:<AddProduct/>
+            },
+            {
+                path:"/update/:id",
+                element:<Update/>,
+                loader: ({params})=>fetch(`http://localhost:5000/update/${params.id}`)
             }
         ]
     }
