@@ -97,7 +97,7 @@ const Products = () => {
     </div>
     
           <div className="card-actions justify-between">
-            <Link><button className="btn btn-primary flex items-center gap-3 text-white bg-orange-500 border-none"><BsEyeFill className="text-2xl"/> View Details</button></Link>
+            <Link to={`/detail/${car._id}`}><button className="btn btn-primary flex items-center gap-3 text-white bg-orange-500 border-none"><BsEyeFill className="text-2xl"/> View Details</button></Link>
             <Link to={`/update/${car._id}`}><button className="btn btn-primary flex items-center gap-3 text-white bg-orange-500 border-none"><BsFillPenFill className="text-2xl"/> Update Product</button></Link>
           </div>
         </div>
