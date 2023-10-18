@@ -31,7 +31,7 @@ const addProduct = e => {
         console.log(data)
         if(data.insertedId){
             Swal.fire(
-                'Good job!',
+                'Great!',
                 'Product added successfully!',
                 'success'
               )
