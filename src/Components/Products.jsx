@@ -106,7 +106,7 @@ const Products = () => {
     
     </div>
     
-    </div> : <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold container mx-auto my-20">We&lsquo;re excited to announce that the all-new 2024 <span className="text-orange-400">HONDA</span> is coming soon! This revolutionary new car features a sleek design, state-of-the-art technology, and a luxurious interior.</h1>
+    </div> : <h1 className="text-3xl md:text-5xl flex justify-center text-orange-400 items-center h-screen font-bold container mx-auto">We&lsquo;re excited to announce that the all-new 2024 HONDA is coming soon! </h1>
 }
         </>
     );

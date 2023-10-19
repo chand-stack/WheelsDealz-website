@@ -36,30 +36,32 @@ const Cart = () => {
 
 <div className='container mx-auto'>
 
-<div className=''>
-
 {
-    carts.map(car => <div key={car._id} className='grid md:grid-cols-2 p-2 md:p-5'>
-        <img className='md:rounded-l-2xl mx-auto' src={car.photo} alt="" />
-        <div className='bg-slate-100 flex flex-col md:rounded-r-2xl p-3 hover:bg-black hover:text-white hover:duration-1000'>
+    carts.length>0 ? <div className=''>
 
-        <p className="text-xl flex-grow"><span className="font-semibold">Name:</span> {car.name}</p>
-    <p className="text-xl flex-grow"><span className="font-semibold">Type:</span> {car.type}</p>
-    <p className="text-xl flex-grow"><span className="font-semibold">Price:</span> {car.price}</p>
-    <div className="text-xl flex-grow"><span className="font-semibold">Rating: </span><div className="rating">
-      <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-      <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-      <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-      <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-      <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" defaultChecked/> {car.rating}
-    </div></div>
-    <div><button onClick={()=> cartRemove(car._id)} className="btn w-full text-white bg-orange-500 font-semibold">Remove From Cart</button></div>
-
-        </div>
-    </div>)
+    {
+        carts.map(car => <div key={car._id} className='grid md:grid-cols-2 p-2 md:p-5'>
+            <img className='md:rounded-l-2xl mx-auto' src={car.photo} alt="" />
+            <div className='bg-slate-100 flex flex-col md:rounded-r-2xl p-3 hover:bg-black hover:text-white hover:duration-1000'>
+    
+            <p className="text-xl flex-grow"><span className="font-semibold">Name:</span> {car.name}</p>
+        <p className="text-xl flex-grow"><span className="font-semibold">Type:</span> {car.type}</p>
+        <p className="text-xl flex-grow"><span className="font-semibold">Price:</span> {car.price}</p>
+        <div className="text-xl flex-grow"><span className="font-semibold">Rating: </span><div className="rating">
+          <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+          <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+          <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+          <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+          <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" defaultChecked/> {car.rating}
+        </div></div>
+        <div><button onClick={()=> cartRemove(car._id)} className="btn w-full text-white bg-orange-500 font-semibold">Remove From Cart</button></div>
+    
+            </div>
+        </div>)
+    }
+    
+    </div> : <h1 className='h-screen flex justify-center items-center text-3xl md:text-5xl font-bold text-orange-500'>Hey, your cart is still empty! Add some products to start shopping.</h1>
 }
-
-</div>
 
 </div>
 
