@@ -1,14 +1,35 @@
+import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const Login = () => {
+
+    const {loginUser} = useContext(AuthContext)
 
     const loginHandler = e => {
         e.preventDefault()
         const email = e.target.email.value 
         const password = e.target.password.value 
         console.log(email,password);
+        loginUser(email,password)
+        .then(()=>{
+            Swal.fire(
+                'Success',
+  'You are successfully logged in!',
+  'success'
+              )
+        })
+        .catch(error=>{
+            console.log(error);
+            Swal.fire(
+                'Error',
+  'invalid-login-credentials!!',
+  'error'
+              )
+        })
     }
 
     return (

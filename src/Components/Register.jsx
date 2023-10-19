@@ -1,7 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from 'react-icons/fc';
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Register = () => {
+
+    const {createUser,updateUserProfile} = useContext(AuthContext)
+
+    const navigate = useNavigate()
 
     const registerHandler = e => {
         e.preventDefault()
@@ -10,6 +17,51 @@ const Register = () => {
         const email = e.target.email.value 
         const password = e.target.password.value 
         console.log(name,photo,email,password);
+
+        if(password.length<6){
+            Swal.fire(
+                'Error',
+  'Password must be at least 6 characters long!!',
+  'error'
+              )
+              return
+        }
+        if(!/[A-Z]/.test(password)){
+            Swal.fire(
+                'Error',
+  'Password must contain at least one uppercase letter!!',
+  'error'
+              )
+              return
+        }
+        if(!/(\W)/.test(password)){
+            Swal.fire(
+                'Error',
+  'Password must contain at least one special character!!',
+  'error'
+              )
+              return
+        }
+
+        createUser(email,password)
+        .then(() => {
+            updateUserProfile(name,photo)
+            .then(()=>{
+                Swal.fire(
+                    'Success',
+      'You have successfully registered!',
+      'success'
+                  )
+                  navigate("/")
+            })
+            .catch(error=>{
+                console.log(error)
+            })
+            e.target.reset()
+        })
+        .catch(()=>{
+
+        })
     }
 
     return (
