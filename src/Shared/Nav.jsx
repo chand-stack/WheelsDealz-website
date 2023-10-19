@@ -46,7 +46,7 @@ My Cart
     </ul>
   </div>
   <div className="navbar-end">
-    <Link><button className="btn btn-outline text-white border-orange-500 flex items-center gap-2"><BsPersonCircle className='text-orange-500 text-lg'/>Login</button></Link>
+    <Link to="/login"><button className="btn btn-outline text-white border-orange-500 flex items-center gap-2"><BsPersonCircle className='text-orange-500 text-lg'/>Login</button></Link>
   </div>
 </div>
 </Headroom>
