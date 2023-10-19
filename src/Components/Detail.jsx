@@ -1,8 +1,42 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import bg from '../assets/carcover2.jpg'
+import Swal from "sweetalert2";
 
 const Detail = () => {
     const loadedData = useLoaderData()
+
+    const cartHandler = () => {
+        const name = loadedData.name 
+        const brandName = loadedData.brandName
+        const type = loadedData.type
+        const price = loadedData.price 
+        const description = loadedData.description 
+        const rating = loadedData.rating
+        const photo = loadedData.photo
+        const added = "cart"
+        console.log(name,brandName,type,price,description,rating,photo);
+        const cart = {
+            name,brandName,type,price,description,rating,photo,added
+        }
+
+        fetch('http://localhost:5000/cart',{
+            method:"POST",
+            headers:{
+                "content-type":"application/json"
+            },
+            body:JSON.stringify(cart)
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.insertedId){
+                Swal.fire(
+                    'Great!',
+                    'Item added to cart!',
+                    'success'
+                  )
+            }
+        })
+    }
     console.log(loadedData);
     return (
         <>
@@ -30,7 +64,7 @@ const Detail = () => {
       <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
       <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" defaultChecked/> {loadedData.rating}
     </div></div>
-    <div><Link><button className="btn w-full text-white bg-orange-500 font-semibold">Add To Cart</button></Link></div>
+    <div><button onClick={()=>cartHandler()} className="btn w-full text-white bg-orange-500 font-semibold">Add To Cart</button></div>
 </div>
 
 </div>
