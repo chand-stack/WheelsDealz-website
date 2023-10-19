@@ -7,16 +7,16 @@ const Detail = () => {
 
     const cartHandler = () => {
         const name = loadedData.name 
-        const brandName = loadedData.brandName
+        // const brandName = loadedData.brandName
         const type = loadedData.type
         const price = loadedData.price 
         const description = loadedData.description 
         const rating = loadedData.rating
         const photo = loadedData.photo
         const added = "cart"
-        console.log(name,brandName,type,price,description,rating,photo);
+        console.log(name,type,price,description,rating,photo);
         const cart = {
-            name,brandName,type,price,description,rating,photo,added
+            name,type,price,description,rating,photo,added
         }
 
         fetch('http://localhost:5000/cart',{

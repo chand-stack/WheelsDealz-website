@@ -40,10 +40,10 @@ const Cart = () => {
 
 {
     carts.map(car => <div key={car._id} className='grid md:grid-cols-2 p-2 md:p-5'>
-        <img className='md:rounded-l-2xl' src={car.photo} alt="" />
+        <img className='md:rounded-l-2xl mx-auto' src={car.photo} alt="" />
         <div className='bg-slate-100 flex flex-col md:rounded-r-2xl p-3 hover:bg-black hover:text-white hover:duration-1000'>
 
-        <p className="text-xl flex-grow"><span className="font-semibold">Brand Name:</span> {car.brandName}</p>
+        <p className="text-xl flex-grow"><span className="font-semibold">Name:</span> {car.name}</p>
     <p className="text-xl flex-grow"><span className="font-semibold">Type:</span> {car.type}</p>
     <p className="text-xl flex-grow"><span className="font-semibold">Price:</span> {car.price}</p>
     <div className="text-xl flex-grow"><span className="font-semibold">Rating: </span><div className="rating">
