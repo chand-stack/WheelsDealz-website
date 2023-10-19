@@ -42,7 +42,7 @@ const Cart = () => {
     {
         carts.map(car => <div key={car._id} className='grid md:grid-cols-2 p-2 md:p-5'>
             <img className='md:rounded-l-2xl mx-auto' src={car.photo} alt="" />
-            <div className='bg-slate-100 flex flex-col md:rounded-r-2xl p-3 hover:bg-black hover:text-white hover:duration-1000'>
+            <div className='bg-slate-100 flex flex-col md:rounded-r-2xl p-3 '>
     
             <p className="text-xl flex-grow"><span className="font-semibold">Name:</span> {car.name}</p>
         <p className="text-xl flex-grow"><span className="font-semibold">Type:</span> {car.type}</p>

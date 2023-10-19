@@ -1,13 +1,34 @@
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 
 
 const Login = () => {
 
-    const {loginUser} = useContext(AuthContext)
+    const {loginUser,loginGoogle} = useContext(AuthContext)
+
+    const location = useLocation()
+    console.log(location.state);
+
+    const navigate = useNavigate()
+
+
+    const googleLoginHandler = () => {
+        loginGoogle()
+        .then(()=>{
+            Swal.fire(
+                'Logged in',
+  'You are successfully logged in!',
+  'success'
+              )
+              navigate(location.state || "/")
+        })
+        .catch(()=>{
+
+        })
+    }
 
     const loginHandler = e => {
         e.preventDefault()
@@ -17,10 +38,11 @@ const Login = () => {
         loginUser(email,password)
         .then(()=>{
             Swal.fire(
-                'Success',
+                'Logged in',
   'You are successfully logged in!',
   'success'
               )
+              navigate(location.state || "/")
         })
         .catch(error=>{
             console.log(error);
@@ -58,7 +80,7 @@ const Login = () => {
         <p className="font-semibold text-center">Do Not have an account? please <Link className="text-orange-500" to="/register">Register</Link></p>
         <p className="text-center font-semibold">---Or---</p>
       </form>
-      <div className="flex justify-center"><button className="btn btn-outline">Continue with <FcGoogle className="text-2xl"/></button></div>
+      <div className="flex justify-center"><button onClick={googleLoginHandler} className="btn btn-outline">Continue with <FcGoogle className="text-2xl"/></button></div>
       </div>
        </div>
         </>

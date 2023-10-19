@@ -6,9 +6,22 @@ import Swal from "sweetalert2";
 
 const Register = () => {
 
-    const {createUser,updateUserProfile} = useContext(AuthContext)
+    const {createUser,updateUserProfile,loginGoogle} = useContext(AuthContext)
 
     const navigate = useNavigate()
+
+    const googleHandler = () => {
+        loginGoogle()
+        .then(()=>{
+            Swal.fire(
+                'Success',
+  'You have successfully registered!',
+  'success'
+              )
+              navigate("/")
+        })
+        .catch()
+    }
 
     const registerHandler = e => {
         e.preventDefault()
@@ -53,6 +66,7 @@ const Register = () => {
       'success'
                   )
                   navigate("/")
+                  window.location.reload();
             })
             .catch(error=>{
                 console.log(error)
@@ -101,7 +115,7 @@ const Register = () => {
         <p className="font-semibold text-center">Already have an account? please <Link className="text-orange-500" to="/login">Login</Link></p>
         <p className="text-center font-semibold">---Or---</p>
       </form>
-      <div className="flex justify-center"><button className="btn btn-outline">Continue with <FcGoogle className="text-2xl"/></button></div>
+      <div className="flex justify-center"><button onClick={googleHandler} className="btn btn-outline">Continue with <FcGoogle className="text-2xl"/></button></div>
        </div>
       
        </div>
