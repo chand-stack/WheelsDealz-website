@@ -7,8 +7,9 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 import userimg from '../assets/icons8-user.gif'
 
 
-const Nav = () => {
+const Nav = ({themeHandler}) => {
   const {user,logout} = useContext(AuthContext)
+  
 
  const logoutHandler = () => {
   logout()
@@ -47,7 +48,7 @@ My Cart
       <label tabIndex={0} className="btn btn-ghost text-white lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+      <ul tabIndex={0} className="menu menu-sm text-black dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         {
             links
         }
@@ -79,6 +80,7 @@ My Cart
     
     
     :<Link to="/login"><button className="btn btn-outline text-white border-orange-500 flex items-center gap-2"><BsPersonCircle className='text-orange-500 text-lg'/>Login</button></Link>}
+    <input onClick={()=>themeHandler()} type="checkbox" className="toggle toggle-sm md:toggle-lg"  />
   </div>
 </div>
 </Headroom>

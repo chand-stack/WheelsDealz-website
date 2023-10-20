@@ -1,12 +1,19 @@
 import { Outlet } from "react-router-dom";
 import Nav from "../Shared/Nav";
 import Footer from "../Shared/Footer";
+import { useState } from "react";
 
 
 const Root = () => {
+    const [theme,setTheme] = useState(false)
+
+    const themeHandler =()=> {
+        setTheme(!theme)
+        console.log(theme);
+    }
     return (
-        <div>
-            <Nav/>
+        <div className={theme?'bg-slate-900 text-white' : ''}>
+            <Nav themeHandler={themeHandler}/>
             <Outlet/>
             <Footer></Footer>
         </div>
