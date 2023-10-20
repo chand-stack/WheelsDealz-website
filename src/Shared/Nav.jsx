@@ -28,7 +28,7 @@ Home
 <li><NavLink to="/addproduct" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-orange-500 underline" : ""}>
 Add Product
 </NavLink></li>
-<li><NavLink to="/cart" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-orange-500 underline" : ""}>
+<li><NavLink to={`/cart/${user?.displayName}`} className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-orange-500 underline" : ""}>
 My Cart
 </NavLink></li>
     </>

@@ -12,7 +12,7 @@ const Root = () => {
         console.log(theme);
     }
     return (
-        <div className={theme?'bg-slate-900 text-white' : ''}>
+        <div className={theme?'bg-slate-900 text-slate-400' : ''}>
             <Nav themeHandler={themeHandler}/>
             <Outlet/>
             <Footer></Footer>

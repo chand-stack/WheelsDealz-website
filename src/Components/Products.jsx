@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { BsFillPenFill,BsEyeFill } from 'react-icons/bs';
+import { Rating } from "@smastrom/react-rating";
+import '@smastrom/react-rating/style.css'
 
 import ban1 from '../assets/pb1.jpg'
 import ban2 from '../assets/pb.jpg'
@@ -84,13 +86,9 @@ const Products = () => {
           <p className="text-lg font-semibold text-white"><span className="font-bold text-orange-400">Brand Name: </span>{car.brandName}</p>
           <p className="text-lg font-semibold text-white"><span className="font-bold text-orange-400">Type: </span>{car.type}</p>
           <p className="text-lg font-semibold text-white"><span className="font-bold text-orange-400">Price: </span>${car.price}</p>
-          <div className="text-lg font-semibold text-white"><span className="font-bold text-orange-400">Rating: </span><div className="rating">
-      <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-      <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-      <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-      <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-      <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" defaultChecked/> {car.rating}
-    </div></div>
+          <div className="text-lg font-semibold flex gap-3 text-white items-center"><span className="font-semibold">Rating: </span> <span className="flex items-center gap-2"><Rating  style={{ maxWidth: 180 }}
+      value={car.rating}
+      readOnly></Rating> {car.rating} </span></div>
     
     <div>
     
