@@ -77,7 +77,7 @@ const AddProduct = () => {
                 type="text"
                 required
                 name="brand"
-                placeholder="Brand Name"
+                placeholder="Brand Name EX. Toyota/Ford/BMW/Mercedes-Benz/Tesla/Honda"
                 className="input input-bordered input-warning w-full"
               />
             </div>
