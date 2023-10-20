@@ -24,7 +24,7 @@ const AddProduct = () => {
       photo,
     };
 
-    fetch(`http://localhost:5000/${brandNameLower}`, {
+    fetch(`https://wheelsdeals-server.vercel.app/${brandNameLower}`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

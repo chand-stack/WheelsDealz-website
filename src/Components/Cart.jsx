@@ -11,7 +11,7 @@ const Cart = () => {
 
   const cartRemove = (_id) => {
     console.log(_id);
-    fetch(`http://localhost:5000/cart/${_id}`, {
+    fetch(`https://wheelsdeals-server.vercel.app/cart/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

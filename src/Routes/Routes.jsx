@@ -42,7 +42,7 @@ const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/update/${params.id}`),
+          fetch(`https://wheelsdeals-server.vercel.app/update/${params.id}`),
       },
       {
         path: "/detail/:id",
@@ -52,7 +52,7 @@ const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/update/${params.id}`),
+          fetch(`https://wheelsdeals-server.vercel.app/update/${params.id}`),
       },
       {
         path: "/cart/:id",
@@ -62,7 +62,7 @@ const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/cart/${params.id}`),
+          fetch(`https://wheelsdeals-server.vercel.app/cart/${params.id}`),
       },
       {
         path: "/login",

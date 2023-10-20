@@ -26,7 +26,7 @@ const Update = () => {
       rating,
       photo,
     };
-    fetch(`http://localhost:5000/update/${loadedData._id}`, {
+    fetch(`https://wheelsdeals-server.vercel.app/update/${loadedData._id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

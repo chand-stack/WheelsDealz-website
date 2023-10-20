@@ -16,7 +16,7 @@ const Products = () => {
   const brandName = params.id.toLowerCase();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/${brandName}`)
+    fetch(`https://wheelsdeals-server.vercel.app/${brandName}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
