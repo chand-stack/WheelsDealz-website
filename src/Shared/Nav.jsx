@@ -25,6 +25,9 @@ const Nav = ({themeHandler}) => {
 <li><NavLink to="/" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-orange-500 underline " : ""}>
 Home
 </NavLink></li>
+<li><NavLink to="/about" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-orange-500 underline " : ""}>
+About Us
+</NavLink></li>
 <li><NavLink to="/addproduct" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-orange-500 underline" : ""}>
 Add Product
 </NavLink></li>
